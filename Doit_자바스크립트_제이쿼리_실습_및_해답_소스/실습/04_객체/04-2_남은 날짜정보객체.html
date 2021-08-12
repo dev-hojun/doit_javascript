@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>남은 날짜정보객체</title>
+</head>
+<body>
+</body>
+<script>
+    var today = new Date();
+    var nowYear = today.getFullYear();
+
+    var theDate = new Date(nowYear, 12, 31); // 올해 연말에 대한 날짜 정보 객체를 생성
+    var diffDate = theDate.getTime() - today.getTime(); // 남은 날 = 특정 날짜 - 현재 날짜(밀리 초 단위)
+
+    var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24)); // 오늘 날짜를 포함시키기 위해 Math.ceil() 메서드 사용
+    document.write("연말 D-day:" + result + "일 남았습니다.");
+</script>
+</html>
