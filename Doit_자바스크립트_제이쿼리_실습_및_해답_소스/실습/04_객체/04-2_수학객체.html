@@ -13,15 +13,22 @@
         roundNum = Math.round(num), // num변수에 해당되는 값 중 소수점 첫째 자리 반올림
         floorNum = Math.floor(num), // 소수점 첫째 자리 내림
         ceilNum = Math.ceil(num), // 소수점 첫째 자리 올림
-        rndNum = Math.random(), // 0과 1 사이의 난수 발생
         piNum = Math.PI; // 원주율 상수로 반환
+        rndNum = Math.random(), // 0과 1 사이의 난수 발생
+        rndNum_2 = Math.random()*10, // 0부터 10까지 실수로 난수를 반환
+        rndNum_3 = Math.floor(Math.random()*10); // 0부터 10까지 실수로 난수를 반환 후 소수점 첫째 자리 내림
+        rndNum_4 = Math.floor(Math.random()*31) + 120; // 120부터 150까지 실수로 난수를 반환 후 소수점 첫째 자리 내림
+
 
         document.write(maxNum, "<br>");
         document.write(minMum, "<br>");
         document.write(roundNum, "<br>");
         document.write(floorNum, "<br>");
         document.write(ceilNum, "<br>");
-        document.write(rndNum, "<br>");
         document.write(piNum, "<br>");
+        document.write(rndNum, "<br>");
+        document.write(rndNum_2, "<br>");
+        document.write(rndNum_3, "<br>");
+        document.write(rndNum_4, "<br>");
     </script>
 </html>
