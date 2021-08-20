@@ -2,43 +2,57 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>배열객체2</title>
+    <title>배열객체</title>
 </head>
 <body>
 </body>
 <script>
-    var arr_1 = ["사당", "교대", "방배", "강남"];
-    var arr_2 = ["신사", "압구정", "옥수"];
-
-    var result = arr_1.join("-"); // join: 배열 객체의 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환
-    document.write(result, "<br>");
+    const arr_1 = ["사당", "교대", "방배", "강남"];
+    const arr_2 = ["신사", "압구정", "옥수"];
 
     result = arr_1.concat(arr_2); // concat : 2개의 배열 객체를 하나로 결합
-    document.write(result, "<br>");
+    document.write("concat 예제: ", result, "<br>");
+
+    var result = arr_1.join("-"); // join: 배열 객체의 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환
+    document.write("join 예제: ", result, "<br>");
 
     result = arr_1.slice(1, 3); // slice : 배열 객체 데이터 중 원하는 인덱스 구간만큼 잘라서 배열 객체로 가져옴
-    document.write(result, "<br>");
+    document.write("slice 예제: ", result, "<br>");
     
     arr_1.sort();
-    document.write(arr_1, "<br>"); // sort: 배열 객체 데이터를 오름차순으로 정렬
+    document.write("sort 예제: ", arr_1, "<br>"); // sort: 배열 객체 데이터를 오름차순으로 정렬
 
     arr_2.reverse();
-    document.write(arr_2, "<br>"); // reverse : 배열 객체 데이터 순서를 거꾸로 반환
+    document.write("reverse 예제: ", arr_2, "<br>"); // reverse : 배열 객체 데이터 순서를 거꾸로 반환
 
-    const greenArr = ["교대", "방배", "강남"];
-    const yellowArr = ["미금", "정자", "수서"];
 
-    greenArr.splice(2, 1, "서초", "역삼"); // splice: 배열 객체 지정 데이터를 삭제 후 그 구간에 새 데이터를 삽입 / 2번 인덱스(강남)부터 1개의 데이터를 삭제 후 데이터 추가
-    document.write(greenArr, "<br>");
 
-    const data1 = yellowArr.pop(); // 배열에 저장된 데이터 중 마지막 인데스에 data1에 저장
-    const data2 = yellowArr.shift(); // 배열에 저장된 데이터 중 첫 번째 인덱스를 data2에 저장
+    const arr_3 = ["교대", "방배", "강남"];
+    const arr_4 = ["미금", "정자", "수서"];
 
-    yellowArr.push(data2); // data2에 저장된 데이터(미금)를 yellowArr 마지막 인덱스에 새 데이터로 삽입
-    document.write(yellowArr, "<br>"); 
+    arr_3.splice(2, 1, "서초", "역삼"); // splice: 배열 객체 지정 데이터를 삭제 후 그 구간에 새 데이터를 삽입 / 2번 인덱스(강남)부터 1개의 데이터를 삭제 후 데이터 추가
+    document.write("splice 예제: ", arr_3, "<br>");
 
-    yellowArr.unshift(data1); // data1에 저장된 데이터(수서)를 yellowArr 첫 번째 인덱스에 새 데이터로 삽입
-    document.write(yellowArr, "<br>");
+    const data1 = arr_4.pop(); // 배열에 저장된 데이터 중 마지막 인데스에 data1에 저장
+    const data2 = arr_4.shift(); // 배열에 저장된 데이터 중 첫 번째 인덱스를 data2에 저장
+
+    arr_4.push(data2); // data2에 저장된 데이터(미금)를 arr_4 마지막 인덱스에 새 데이터로 삽입
+    document.write("push 예제: ", arr_4, "<br>"); 
+
+    arr_4.unshift(data1); // data1에 저장된 데이터(수서)를 arr_4 첫 번째 인덱스에 새 데이터로 삽입
+    document.write("unshift 예제: ", arr_4, "<br>");
+
+
+
+    const arr_5 = ["사과", "바나나", "오렌지"];
+    const arr_6 = {appple : 'red', banana : 'yellow'};
+
+    arr_5.copyWithin(1, 0, 1); // copyWithin(붙여넣기할 위치, 복사 시작 위치, 복자 종료 위치) / 0~1 배열을 복사해 바나나에서 붙여넣기함
+    document.write(arr_5, "<br>");
+
+    console.log("entries 예제: ", Object.entries(arr_6)); // 
+
+
 
 </script>
 </html>

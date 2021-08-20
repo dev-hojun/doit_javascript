@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배열객체</title>
+</head>
+<body>
+</body>
+<script>
+    const data = [
+    {name: "kim",  age: 20}, 
+    {name: "lee", age: 19}, 
+    {name: "park",  age: 27}, 
+    {name: "choi", age: 18}
+]
+
+const result = data.every( i => { 
+return i.age >= 20 // age >= 20 검사
+});
+
+console.log(result);
+
+</script>
+</html>
