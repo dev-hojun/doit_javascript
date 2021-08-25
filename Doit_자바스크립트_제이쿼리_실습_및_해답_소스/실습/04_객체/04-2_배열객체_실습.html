@@ -7,18 +7,11 @@
 <body>
 </body>
 <script>
-    const data = [
-    {name: "kim",  age: 20}, 
-    {name: "lee", age: 19}, 
-    {name: "park",  age: 27},
-    {name: "choi", age: 21},
-]
+    const data = ["apple", "banana", "orange", "grape"]
+    const result = data.values();
 
-const result = data.every( i => { 
-return i.age >= 20 // age >= 20 검사
-});
-
-console.log(result);
-
+    for (const val of result) {
+        console.log(val);
+    }
 </script>
 </html>
